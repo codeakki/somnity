@@ -52,7 +52,7 @@ const NameService = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
             Name Service
           </h1>
-          <p className="text-muted-foreground">Register and manage human-readable addresses on W-Chain</p>
+          <p className="text-muted-foreground">Register and manage human-readable addresses on Somnity</p>
         </div>
 
         {/* Search Section */}
@@ -62,7 +62,7 @@ const NameService = () => {
               <Search className="w-5 h-5 mr-2" />
               Search Names
             </CardTitle>
-            <CardDescription>Find and register available W-Chain names</CardDescription>
+            <CardDescription>Find and register available Somnity names</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex gap-4">
@@ -136,7 +136,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Your Registered Names</CardTitle>
-                <CardDescription>Manage your W-Chain names and settings</CardDescription>
+                <CardDescription>Manage your Somnity names and settings</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -183,7 +183,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Register New Name</CardTitle>
-                <CardDescription>Claim your unique W-Chain identity</CardDescription>
+                <CardDescription>Claim your unique Somnity identity</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
@@ -235,7 +235,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Name Marketplace</CardTitle>
-                <CardDescription>Buy and sell premium W-Chain names</CardDescription>
+                <CardDescription>Buy and sell premium Somnity names</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-center py-12">
@@ -244,7 +244,7 @@ const NameService = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Marketplace Coming Soon</h3>
                   <p className="text-muted-foreground">
-                    The secondary marketplace for trading W-Chain names will be available soon.
+                    The secondary marketplace for trading Somnity names will be available soon.
                   </p>
                 </div>
               </CardContent>

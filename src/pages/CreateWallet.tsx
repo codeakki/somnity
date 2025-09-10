@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 import { WalletKeys, CryptoService } from "@/lib/crypto";
 import { deploySmartContractWallet, estimateWalletCreationGas, GasEstimate } from "@/lib/utils";
 import { FundingService } from "@/lib/funding";
+import { useWalletName } from "@/hooks/useWalletName";
 
 
 const CreateWallet = () => {
@@ -31,6 +32,7 @@ const CreateWallet = () => {
   const [isFunding, setIsFunding] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { isChecking, isAvailable, error } = useWalletName(walletName);
 
   // Use generated seed phrase instead of hardcoded one
   const seedPhrase = walletKeys?.seedPhrase || [];
@@ -301,9 +303,9 @@ const CreateWallet = () => {
   const canContinue = () => {
     switch (step) {
       case 1:
-        return walletName && walletName.length >= 3;
+        return walletName && walletName.length >= 3 && isAvailable;
       case 2:
-        return walletKeys !== null && keyGenerationError === null;
+        return walletKeys != null && keyGenerationError === null;
       case 3:
         return showSeedPhrase;
       case 4:

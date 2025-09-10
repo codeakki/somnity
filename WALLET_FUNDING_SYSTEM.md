@@ -1,6 +1,6 @@
 # Wallet Funding System
 
-This document describes the wallet funding system implemented in the W-Chain Gate application.
+This document describes the wallet funding system implemented in the Somnity Gate application.
 
 ## Overview
 

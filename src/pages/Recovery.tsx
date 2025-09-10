@@ -109,7 +109,7 @@ const Recovery = () => {
     setEmailRecovering(true);
     try {
       const wallets = await walletService.getWalletsByRecoveryEmail(email);
-      const ok = await walletService.rebindWalletsToCurrentSession(wallets.map((w: any) => w.id));
+      const ok = await walletService.rebindWalletsToCurrentSession(wallets.map((w) => w.id));
       if (!ok) throw new Error('Failed to rebind wallets');
       toast({ title: "Wallets recovered", description: `Recovered ${wallets.length} wallet(s).` });
       navigate('/dashboard');
@@ -186,7 +186,7 @@ const Recovery = () => {
               <Shield className="h-4 w-4" />
               <AlertTitle>Multiple Backup Options</AlertTitle>
               <AlertDescription>
-                W-Access provides multiple ways to backup and recover your wallet. Enable multiple methods for maximum security.
+                Somnity provides multiple ways to backup and recover your wallet. Enable multiple methods for maximum security.
               </AlertDescription>
             </Alert>
 

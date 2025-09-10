@@ -147,7 +147,7 @@ const Dashboard = () => {
             </div>
           </div>
           <p className="text-muted-foreground">
-            Manage your W-Chain wallets and view their details. Wallets are associated with your current browser session.
+            Manage your Somnity wallets and view their details. Wallets are associated with your current browser session.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ const Dashboard = () => {
               <Wallet className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
               <h3 className="text-xl font-semibold mb-2">No Wallets Yet</h3>
               <p className="text-muted-foreground mb-6">
-                Create your first wallet to get started with W-Chain.
+                Create your first wallet to get started with Somnity.
               </p>
               <Button
                 onClick={() => navigate("/create-wallet")}

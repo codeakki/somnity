@@ -143,7 +143,7 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
           <CheckCircle className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-2xl font-bold">Wallet Created Successfully!</h2>
-        <p className="text-muted-foreground">Your W-Access wallet is ready to use</p>
+        <p className="text-muted-foreground">Your Somnity wallet is ready to use</p>
       </div>
 
       <Card className="border-primary/20 bg-gradient-subtle">

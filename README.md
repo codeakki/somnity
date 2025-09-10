@@ -1,4 +1,14 @@
-# Welcome to your Lovable project
+# Somnity - Advanced Web3 Wallet Platform
+
+Somnity is a cutting-edge Web3 wallet creation and management platform that provides secure, user-friendly access to blockchain technologies. Built with modern web technologies and focused on security and usability.
+
+## Features
+
+- **Secure Wallet Creation**: Generate wallets locally with advanced cryptography
+- **Human-Readable Names**: WNS (Web3 Name Service) integration for easy wallet identification
+- **Multi-Chain Support**: Compatible with multiple blockchain networks
+- **Advanced Recovery**: Multiple backup and recovery options for maximum security
+- **Modern UI/UX**: Beautiful, responsive interface built with React and Tailwind CSS
 
 ## Project info
 
@@ -27,7 +37,7 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd somnity
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -54,15 +64,18 @@ npm run dev
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - Modern UI library
+- **shadcn/ui** - High-quality UI components
+- **Tailwind CSS** - Utility-first CSS framework
+- **Supabase** - Backend as a service
+- **Ethers.js** - Ethereum library
+- **Framer Motion** - Animation library
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/c2bb463d-37fc-4210-8183-24726fb45bfc) and click on Share -> Publish.
+Simply open [Lovable](https://lovable.dev/projects/c2bb463d-37fc-4210-8183-24726fb45bfc) and click on Share → Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
@@ -71,3 +84,7 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## License
+
+© 2025 Somnity. All rights reserved.

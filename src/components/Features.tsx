@@ -38,8 +38,8 @@ const Features = () => {
     },
     {
       icon: Globe,
-      title: "W-Chain Native",
-      description: "Built specifically for W-Chain's infrastructure and ecosystem",
+      title: "Somnity Native",
+      description: "Built specifically for Somnity's infrastructure and ecosystem",
       benefits: ["Optimized gas fees", "Native integration", "Future-proof"]
     },
     {
@@ -56,8 +56,8 @@ const Features = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2">
-            Why Choose <span className="bg-gradient-hero bg-clip-text text-transparent">W-Access</span>?
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Why Choose <span className="bg-gradient-hero bg-clip-text text-transparent">Somnity</span>?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-2">
             We're revolutionizing Web3 onboarding with features that make wallet management as simple as email.

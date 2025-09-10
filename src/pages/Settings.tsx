@@ -41,7 +41,7 @@ const Settings = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
             Settings
           </h1>
-          <p className="text-muted-foreground">Manage your W-Access preferences and account settings</p>
+          <p className="text-muted-foreground">Manage your Somnity preferences and account settings</p>
         </div>
 
         <Tabs defaultValue="profile" className="space-y-6">
@@ -86,7 +86,7 @@ const Settings = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="primary-name">Primary W-Chain Name</Label>
+                  <Label htmlFor="primary-name">Primary Somnity Name</Label>
                   <Select defaultValue="alice.w-chain">
                     <SelectTrigger>
                       <SelectValue />
@@ -100,7 +100,7 @@ const Settings = () => {
 
                 <div>
                   <Label htmlFor="bio">Bio</Label>
-                  <Input id="bio" placeholder="Tell us about yourself" defaultValue="Web3 enthusiast and early W-Chain adopter" />
+                  <Input id="bio" placeholder="Tell us about yourself" defaultValue="Web3 enthusiast and early Somnity adopter" />
                 </div>
 
                 <Button className="bg-gradient-primary hover:opacity-90">
@@ -261,7 +261,7 @@ const Settings = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Appearance Settings</CardTitle>
-                <CardDescription>Customize the look and feel of W-Access</CardDescription>
+                <CardDescription>Customize the look and feel of Somnity</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
@@ -334,8 +334,8 @@ const Settings = () => {
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="mainnet">W-Chain Mainnet</SelectItem>
-                        <SelectItem value="testnet">W-Chain Testnet</SelectItem>
+                        <SelectItem value="mainnet">Somnity Mainnet</SelectItem>
+                        <SelectItem value="testnet">Somnity Testnet</SelectItem>
                         <SelectItem value="custom">Custom RPC</SelectItem>
                       </SelectContent>
                     </Select>
@@ -352,7 +352,7 @@ const Settings = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <Label>Analytics</Label>
-                      <p className="text-sm text-muted-foreground">Help improve W-Access by sharing usage data</p>
+                      <p className="text-sm text-muted-foreground">Help improve Somnity by sharing usage data</p>
                     </div>
                     <Switch defaultChecked />
                   </div>

@@ -1,6 +1,6 @@
-# Cryptographic Implementation for W-Chain Gate
+# Cryptographic Implementation for Somnity Gate
 
-This document describes the cryptographic implementation added to the W-Chain Gate wallet application.
+This document describes the cryptographic implementation added to the Somnity Gate wallet application.
 
 ## Overview
 

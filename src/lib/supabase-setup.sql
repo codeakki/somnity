@@ -1,4 +1,4 @@
--- Supabase Setup Script for W-Chain Gate Development
+-- Supabase Setup Script for Somnity Gate Development
 -- Run this in your Supabase SQL Editor to fix RLS policy issues
 
 -- Option 1: Disable RLS for development (simplest approach)

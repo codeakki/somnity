@@ -28,7 +28,7 @@ const Footer = () => {
     ],
   };
 
-  const handleLinkClick = (link: any) => {
+  const handleLinkClick = (link) => {
     if (link.isModal) {
       setIsContactModalOpen(true);
     } else if (link.isComingSoon) {
@@ -52,13 +52,13 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <img
-                  src="/lovable-uploads/f03e8d40-ba1a-4f1e-a6c0-d0a28269e251.png"
-                  alt="W-Access"
-                  className="w-10 h-10"
-                />
-                <span className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                  W-ACCESS
+                {/* <img 
+                  src="/lovable-uploads/transparent_logo.png" 
+                  alt="Somnity"
+                  className="h-8 w-8" 
+                /> */}
+                <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+                  SOMNITY
                 </span>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -113,8 +113,8 @@ const Footer = () => {
         <div className="border-t border-border/30 py-8 ">
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-[78vw] max-w-[1140px]">
-              <div className="text-muted-foreground text-sm">
-                © 2025 W-Access. Built for W-Chain. All rights reserved.
+              <div className="text-center text-sm text-muted-foreground">
+                © 2025 Somnity. Built for Somnity. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm">
                 <button
@@ -140,7 +140,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-blue-accent font-medium hover:text-blue-accent/80 transition-colors"
                 >
-                  W-Chain
+                  Somnity
                 </a>
                 </span>
               </div>

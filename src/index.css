@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Web3 Dark Theme with Gold/Blue Accents */
+    --background: 220 15% 6%;
+    --foreground: 45 100% 85%;
+
+    --card: 220 15% 8%;
+    --card-foreground: 45 100% 85%;
+
+    --popover: 220 15% 8%;
+    --popover-foreground: 45 100% 85%;
+
+    --primary: 45 100% 65%;
+    --primary-foreground: 220 15% 6%;
+
+    --secondary: 250 80% 60%;
+    --secondary-foreground: 45 100% 85%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 45 20% 60%;
+
+    --accent: 45 90% 55%;
+    --accent-foreground: 220 15% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 100% 85%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 45 100% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom W-Access Design Tokens */
+    --gold: 45 100% 65%;
+    --gold-bright: 45 100% 75%;
+    --gold-dark: 45 80% 45%;
+    --blue-accent: 250 80% 60%;
+    --blue-dark: 250 60% 40%;
+    --dark-surface: 220 15% 8%;
+    --dark-bg: 220 15% 6%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--blue-accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--dark-surface)) 0%, hsl(220 15% 10%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--gold-bright)) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--gold) / 0.2);
+    --shadow-card: 0 10px 30px -5px hsl(220 15% 3% / 0.5);
+    --shadow-blue: 0 0 20px hsl(var(--blue-accent) / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary {
+    /* Fallback for browsers that don't support CSS custom properties */
+    background: linear-gradient(135deg, #F5B400 0%, #3B82F6 100%);
+    /* Modern browsers with CSS custom properties */
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--blue-accent)) 100%);
+  }
+  
+  /* Enhanced backdrop blur with fallbacks */
+  .backdrop-blur-fallback {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Enhanced mix blend mode with fallbacks */
+  .mix-blend-fallback {
+    opacity: 0.9;
+    -webkit-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+  }
+  
+  .dark .mix-blend-fallback {
+    -webkit-mix-blend-mode: screen;
+    mix-blend-mode: screen;
+  }
+  
+  /* Enhanced gradient text with better browser support */
+  .gradient-text {
+    background: linear-gradient(135deg, #F5B400 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Fallback for browsers that don't support background-clip: text */
+    @supports not (background-clip: text) {
+      color: #F5B400;
+    }
+  }
+  
+  .no-focus-ring {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: hsl(var(--border)) !important;
+  }
+  
+  .no-focus-ring:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: hsl(var(--border)) !important;
+  }
+  
+  .no-focus-ring:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: hsl(var(--border)) !important;
+  }
+}
+
+/* Override input focus styles with higher specificity */
+input[type="text"]:focus,
+input[type="text"]:focus-visible,
+input:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: hsl(var(--border)) !important;
+  ring: none !important;
+  ring-offset: none !important;
+}
+
+/* Browser-specific fixes for better compatibility */
+@supports not (backdrop-filter: blur(4px)) {
+  .backdrop-blur-fallback {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+/* Ensure consistent font rendering across browsers */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fix for Safari gradient rendering */
+@supports (-webkit-appearance: none) {
+  .gradient-text {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+
+/* Fallback for browsers that don't support CSS custom properties */
+@supports not (color: hsl(var(--gold))) {
+  .text-gold {
+    color: #F5B400 !important;
+  }
+  
+  .text-blue-accent {
+    color: #3B82F6 !important;
+  }
+  
+  .border-gold {
+    border-color: #F5B400 !important;
+  }
+  
+  .border-blue-accent {
+    border-color: #3B82F6 !important;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Improve touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Better mobile typography */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Improve mobile button interactions */
+  .btn-mobile {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Better mobile form inputs */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablet-specific improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .hover\:translate-x-1:hover {
+    transform: none;
+  }
+  
+  .hover\:border-blue-accent:hover {
+    border-color: inherit;
+  }
+  
+  /* Improve touch feedback */
+  button:active, a:active, [role="button"]:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}

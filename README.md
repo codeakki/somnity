@@ -1,6 +1,6 @@
-# Somnity - Advanced Web3 Wallet Platform
+# Somnia - Advanced Web3 Wallet Platform
 
-Somnity is a cutting-edge Web3 wallet creation and management platform that provides secure, user-friendly access to blockchain technologies. Built with modern web technologies and focused on security and usability.
+Somnia is a cutting-edge Web3 wallet creation and management platform that provides secure, user-friendly access to blockchain technologies. Built with modern web technologies and focused on security and usability.
 
 ## Features
 
@@ -87,4 +87,4 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 
 ## License
 
-© 2025 Somnity. All rights reserved.
+© 2025 Somnia. All rights reserved.

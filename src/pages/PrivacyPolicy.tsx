@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/f03e8d40-ba1a-4f1e-a6c0-d0a28269e251.png" 
-                alt="Somnity" 
+                alt="Somnia" 
                 className="w-8 h-8"
               />
               <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Somnity ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
+                Somnia ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
                 explains how we collect, use, disclose, and safeguard your information when you use our 
                 Web3 wallet creation and management platform.
               </p>
@@ -193,7 +193,7 @@ const PrivacyPolicy = () => {
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong> manav.notnani@gmail.com<br />
                   <strong className="text-foreground">Website:</strong> https://somnity.xyz<br />
-                  <strong className="text-foreground">Address:</strong> Somnity Privacy Team, Web3 Innovation Hub
+                  <strong className="text-foreground">Address:</strong> Somnia Privacy Team, Web3 Innovation Hub
                 </p>
               </div>
             </section>

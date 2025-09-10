@@ -15,7 +15,7 @@ const Features = () => {
     {
       icon: User,
       title: "Human-Readable Names",
-      description: "Replace complex wallet addresses with simple, memorable names like 'alice.w-chain'",
+      description: "Replace complex wallet addresses with simple, memorable names like 'alice.somnia'",
       benefits: ["Easy to remember", "Typo-resistant", "Share with confidence"]
     },
     {
@@ -38,8 +38,8 @@ const Features = () => {
     },
     {
       icon: Globe,
-      title: "Somnity Native",
-      description: "Built specifically for Somnity's infrastructure and ecosystem",
+      title: "Somnia Native",
+      description: "Built specifically for Somnia's infrastructure and ecosystem",
       benefits: ["Optimized gas fees", "Native integration", "Future-proof"]
     },
     {

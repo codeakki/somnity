@@ -20,7 +20,7 @@ const Header = () => {
           <div className="flex items-center space-x-2 sm:space-x-3">
             {/* <img 
               src="/lovable-uploads/transparent_logo.png" 
-              alt="Somnity"
+              alt="Somnia"
               className="h-8 w-8" 
             /> */}
             <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">

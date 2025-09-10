@@ -11,7 +11,7 @@ const HowItWorks = () => {
       step: "01",
       icon: MousePointer,
       title: "Choose Your Name",
-      description: "Pick a human-readable name like 'alice.w-chain' or 'company.w-chain'",
+      description: "Pick a human-readable name like akki.somnia or company.somnia",
       highlight: "Simple & Memorable"
     },
     {
@@ -89,7 +89,7 @@ const HowItWorks = () => {
             <div className="bg-gradient-card border border-border/50 rounded-2xl p-8 max-w-2xl mx-auto shadow-card">
               <h3 className="text-2xl font-semibold mb-4 text-foreground">See It In Action</h3>
               <p className="text-muted-foreground mb-6">
-                Watch how easy it is to create your first Somnity wallet
+                Watch how easy it is to create your first Somnia wallet
               </p>
               
               {/* Mock Demo Preview */}

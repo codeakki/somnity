@@ -186,7 +186,7 @@ const Recovery = () => {
               <Shield className="h-4 w-4" />
               <AlertTitle>Multiple Backup Options</AlertTitle>
               <AlertDescription>
-                Somnity provides multiple ways to backup and recover your wallet. Enable multiple methods for maximum security.
+                Somnia provides multiple ways to backup and recover your wallet. Enable multiple methods for maximum security.
               </AlertDescription>
             </Alert>
 

@@ -15,12 +15,12 @@ const WalletTutorial = () => {
       id: 1,
       title: "Sending Transactions",
       icon: Send,
-      description: "Learn how to send tokens to other Somnity addresses",
+      description: "Learn how to send tokens to other Somnia addresses",
       content: {
         title: "How to Send Tokens",
         points: [
           "Click the Send button in your dashboard",
-          "Enter the recipient's Somnity name (e.g., bob.w-chain) or address",
+          "Enter the recipient's Somnia name (e.g., bob.w-chain) or address",
           "Specify the amount you want to send",
           "Review the transaction details and gas fees",
           "Confirm the transaction with your wallet"
@@ -35,7 +35,7 @@ const WalletTutorial = () => {
       content: {
         title: "How to Receive Tokens",
         points: [
-          "Share your Somnity name (yourname.w-chain) with the sender",
+          "Share your Somnia name (yourname.w-chain) with the sender",
           "Or share your wallet address from the Receive section",
           "Incoming transactions will appear in your activity feed",
           "Tokens will be automatically added to your balance",
@@ -75,7 +75,7 @@ const WalletTutorial = () => {
             </h1>
             <Badge variant="outline">{step} of {tutorialSteps.length}</Badge>
           </div>
-          <p className="text-muted-foreground">Learn the basics of using your Somnity wallet</p>
+          <p className="text-muted-foreground">Learn the basics of using your Somnia wallet</p>
           <Progress value={progress} className="h-2 mt-4" />
         </div>
 

@@ -42,7 +42,7 @@ const CTA = () => {
               Ready to <span className="bg-gradient-hero bg-clip-text text-transparent">Enter Web3</span>?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Create your first wallet now and join the Somnity ecosystem. Experience frictionless Web3 onboarding today.
+              Create your first wallet now and join the Somnia ecosystem. Experience frictionless Web3 onboarding today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

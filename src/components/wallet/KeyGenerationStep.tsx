@@ -122,8 +122,8 @@ export const KeyGenerationStep = ({ onKeysGenerated, onError }: KeyGenerationSte
         <Shield className="h-4 w-4" />
         <AlertDescription>
           {isGenerating 
-            ? "Your keys are being generated locally and will never leave your device. Somnity uses advanced cryptography for maximum security."
-            : "Your keys have been generated locally and never left your device. Somnity uses advanced cryptography for maximum security."
+            ? "Your keys are being generated locally and will never leave your device. Somnia uses advanced cryptography for maximum security."
+            : "Your keys have been generated locally and never left your device. Somnia uses advanced cryptography for maximum security."
           }
         </AlertDescription>
       </Alert>

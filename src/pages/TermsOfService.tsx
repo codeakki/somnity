@@ -20,7 +20,7 @@ const TermsOfService = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/f03e8d40-ba1a-4f1e-a6c0-d0a28269e251.png" 
-                alt="Somnity" 
+                alt="Somnia" 
                 className="w-8 h-8"
               />
               <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
@@ -44,7 +44,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                By accessing and using Somnity ("the Service"), you accept and agree to be bound by the 
+                By accessing and using Somnia ("the Service"), you accept and agree to be bound by the 
                 terms and provision of this agreement. If you do not agree to abide by the above, please 
                 do not use this service.
               </p>
@@ -53,14 +53,14 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Description of Service</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Somnity is a Web3 wallet creation and management platform that provides:
+                Somnia is a Web3 wallet creation and management platform that provides:
               </p>
               <ul className="text-muted-foreground leading-relaxed mb-4 list-disc list-inside">
                 <li>Secure wallet creation and management</li>
-                <li>Human-readable wallet names through WNS (Somnity Name Service)</li>
+                <li>Human-readable wallet names through WNS (Somnia Name Service)</li>
                 <li>Advanced recovery mechanisms</li>
                 <li>Cross-chain compatibility</li>
-                <li>Integration with Somnity blockchain</li>
+                <li>Integration with Somnia blockchain</li>
                 <li>Educational resources and tutorials</li>
               </ul>
             </section>
@@ -109,7 +109,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. Intellectual Property</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                The service and its original content, features, and functionality are owned by Somnity 
+                The service and its original content, features, and functionality are owned by Somnia 
                 and are protected by international copyright, trademark, patent, trade secret, and other 
                 intellectual property laws.
               </p>
@@ -140,7 +140,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">8. Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                To the maximum extent permitted by law, Somnity shall not be liable for any indirect, 
+                To the maximum extent permitted by law, Somnia shall not be liable for any indirect, 
                 incidental, special, consequential, or punitive damages, including without limitation, 
                 loss of profits, data, use, goodwill, or other intangible losses, resulting from your 
                 use of the service.
@@ -150,7 +150,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">9. Indemnification</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                You agree to defend, indemnify, and hold harmless Somnity and its officers, directors, 
+                You agree to defend, indemnify, and hold harmless Somnia and its officers, directors, 
                 employees, and agents from and against any claims, damages, obligations, losses, liabilities, 
                 costs, or debt, and expenses (including attorney's fees) arising from your use of the service 
                 or violation of these terms.
@@ -169,7 +169,7 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-semibold text-foreground mb-4">11. Governing Law</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 These terms shall be interpreted and governed by the laws of the jurisdiction in which 
-                Somnity operates, without regard to its conflict of law provisions.
+                Somnia operates, without regard to its conflict of law provisions.
               </p>
             </section>
 
@@ -191,7 +191,7 @@ const TermsOfService = () => {
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong> manav.notnani@gmail.com<br />
                   <strong className="text-foreground">Website:</strong> https://somnity.xyz<br />
-                  <strong className="text-foreground">Address:</strong> Somnity Legal Team, Web3 Innovation Hub
+                  <strong className="text-foreground">Address:</strong> Somnia Legal Team, Web3 Innovation Hub
                 </p>
               </div>
             </section>
@@ -207,7 +207,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">15. Entire Agreement</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                These terms constitute the sole and entire agreement between you and Somnity regarding 
+                These terms constitute the sole and entire agreement between you and Somnia regarding 
                 the service and supersede all prior and contemporaneous understandings, agreements, 
                 representations, and warranties.
               </p>

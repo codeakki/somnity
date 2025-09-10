@@ -54,7 +54,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 {/* <img 
                   src="/lovable-uploads/transparent_logo.png" 
-                  alt="Somnity"
+                  alt="Somnia"
                   className="h-8 w-8" 
                 /> */}
                 <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
@@ -114,7 +114,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-[78vw] max-w-[1140px]">
               <div className="text-center text-sm text-muted-foreground">
-                © 2025 Somnity. Built for Somnity. All rights reserved.
+                © 2025 Somnity. Built for Somnia. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm">
                 <button
@@ -140,7 +140,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-blue-accent font-medium hover:text-blue-accent/80 transition-colors"
                 >
-                  Somnity
+                  Somnia
                 </a>
                 </span>
               </div>

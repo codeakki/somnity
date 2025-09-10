@@ -169,7 +169,7 @@ const SecuritySetup = () => {
             Secure Your Wallet
           </h1>
           <p className="text-muted-foreground">
-            Set up additional security features to protect your Somnity wallet
+            Set up additional security features to protect your Somnia wallet
           </p>
         </div>
 

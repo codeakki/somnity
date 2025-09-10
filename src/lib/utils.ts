@@ -124,7 +124,7 @@ export const estimateWalletCreationGas = async (name: string, privateKey: string
     } catch (error) {
       console.warn('Failed to get gas price from RPC, using fallback:', error);
       // Fallback to a reasonable gas price if RPC calls fail
-      // For Somnity testnet, use a conservative estimate
+      // For Somnia testnet, use a conservative estimate
       gasPrice = 1000000000n; // 1 gwei as fallback
       console.log(`Using fallback gas price: ${gasPrice} wei (1 gwei)`);
     }
@@ -257,7 +257,7 @@ export const deploySmartContractWallet = async (name: string, privateKey: string
       chainId: activeChain.id,
     };
 
-    // Use legacy transaction for better compatibility with Somnity
+    // Use legacy transaction for better compatibility with Somnia
     // The RPC seems to have issues with EIP-1559, so let's use legacy format
     transaction.type = '0x0'; // Legacy transaction type
     transaction.gasPrice = gasPrice;

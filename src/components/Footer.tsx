@@ -131,20 +131,6 @@ const Footer = () => {
                 </button>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-                <span>Built with ❤️ on</span>
-                <span><a
-                  href="https://somnia.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-accent font-medium hover:text-blue-accent/80 transition-colors"
-                >
-                  Somnia
-                </a>
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

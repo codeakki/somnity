@@ -77,7 +77,7 @@ const NameService = () => {
                     className="rounded-r-none"
                   />
                   <div className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground">
-                    .w-chain
+                    .somnia
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ const NameService = () => {
                       className="rounded-r-none"
                     />
                     <div className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground">
-                      .w-chain
+                      .somnia
                     </div>
                   </div>
                 </div>
@@ -205,22 +205,22 @@ const NameService = () => {
                 <Alert>
                   <CheckCircle className="h-4 w-4" />
                   <AlertDescription>
-                    Registration fee: 10 W-CHAIN (1 year) • Premium names may cost more
+                    Registration fee: 10 somnia (1 year) • Premium names may cost more
                   </AlertDescription>
                 </Alert>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <span>Registration (1 year)</span>
-                    <span className="font-semibold">10 W-CHAIN</span>
+                    <span className="font-semibold">10 somnia</span>
                   </div>
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <span>Gas Fee (estimated)</span>
-                    <span className="font-semibold">0.5 W-CHAIN</span>
+                    <span className="font-semibold">0.5 somnia</span>
                   </div>
                   <div className="flex items-center justify-between p-4 border rounded-lg bg-primary/5">
                     <span className="font-semibold">Total</span>
-                    <span className="font-bold text-primary">10.5 W-CHAIN</span>
+                    <span className="font-bold text-primary">10.5 somnia</span>
                   </div>
                 </div>
 

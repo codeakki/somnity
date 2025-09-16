@@ -174,12 +174,12 @@ const CreateWallet = () => {
 
         toast({
           title: "Gas Estimation Complete",
-          description: `Estimated gas cost: ${currentGasEstimate.gasCostInWCO} WCO`,
+          description: `Estimated gas cost: ${currentGasEstimate.gasCostInSTT} STT`,
         });
 
         // Step 2: Fund the wallet with the exact gas amount needed (if not already funded)
         setIsFunding(true);
-        const fundingResult = await FundingService.fundWalletForGas(walletKeys.address, currentGasEstimate.gasCostInWCO);
+        const fundingResult = await FundingService.fundWalletForGas(walletKeys.address, currentGasEstimate.gasCostInSTT);
         
         if (!fundingResult.success) {
           throw new Error(`Failed to fund wallet: ${fundingResult.error}`);
@@ -189,12 +189,12 @@ const CreateWallet = () => {
         if (fundingResult.transactionHash === "already_funded") {
           toast({
             title: "Wallet Already Funded",
-            description: `Wallet already has sufficient funds (${(parseFloat(currentGasEstimate.gasCostInWCO) * 1.1).toFixed(6)} WCO) for gas fees`,
+            description: `Wallet already has sufficient funds (${(parseFloat(currentGasEstimate.gasCostInSTT) * 1.1).toFixed(6)} STT) for gas fees`,
           });
         } else {
           toast({
             title: "Wallet Funded",
-            description: `Wallet funded with ${(parseFloat(currentGasEstimate.gasCostInWCO) * 1.1).toFixed(6)} WCO for gas fees`,
+            description: `Wallet funded with ${(parseFloat(currentGasEstimate.gasCostInSTT) * 1.1).toFixed(6)} STT for gas fees`,
           });
         }
 
@@ -229,7 +229,7 @@ const CreateWallet = () => {
         if (savedWallet) {
           toast({
             title: "Wallet Created Successfully!",
-            description: `Wallet "${walletName}.w-chain" (${contractAddress.slice(0, 8)}...${contractAddress.slice(-6)}) has been created and deployed to the blockchain.`,
+            description: `Wallet "${walletName}.somnia" (${contractAddress.slice(0, 8)}...${contractAddress.slice(-6)}) has been created and deployed to the blockchain.`,
           });
           navigate("/security-setup");
         } else {

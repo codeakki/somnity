@@ -97,7 +97,7 @@ export const WalletNameStep = ({ walletName, setWalletName }: WalletNameStepProp
               className="rounded-r-none"
             />
             <div className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground whitespace-nowrap">
-              .w-chain
+              .somnia
             </div>
           </div>
         </div>

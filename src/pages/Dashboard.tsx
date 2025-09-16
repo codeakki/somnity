@@ -116,10 +116,10 @@ const Dashboard = () => {
               
               <AlertDialog>
                 <AlertDialogTrigger asChild>
-                  <Button variant="outline" size="sm">
+                  {/* <Button variant="outline" size="sm">
                     <LogOut className="w-4 h-4 mr-2" />
                     Clear Session
-                  </Button>
+                  </Button> */}
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
@@ -192,7 +192,7 @@ const Dashboard = () => {
                   <div className="flex items-center justify-between">
                     <CardTitle className="flex items-center">
                       <Wallet className="w-5 h-5 mr-2" />
-                      {wallet.name}.w-chain
+                      {wallet.name}.somnia
                     </CardTitle>
                     <Badge variant="outline">Active</Badge>
                   </div>
@@ -233,7 +233,7 @@ const Dashboard = () => {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => window.open(`https://scan-testnet.w-chain.com/address/${wallet.address}`, '_blank')}
+                      onClick={() => window.open(`https://shannon-explorer.somnia.network/address/${wallet.address}`, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View

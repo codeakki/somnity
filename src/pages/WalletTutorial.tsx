@@ -20,7 +20,7 @@ const WalletTutorial = () => {
         title: "How to Send Tokens",
         points: [
           "Click the Send button in your dashboard",
-          "Enter the recipient's Somnia name (e.g., bob.w-chain) or address",
+          "Enter the recipient's Somnia name (e.g., bob.somnia) or address",
           "Specify the amount you want to send",
           "Review the transaction details and gas fees",
           "Confirm the transaction with your wallet"
@@ -35,7 +35,7 @@ const WalletTutorial = () => {
       content: {
         title: "How to Receive Tokens",
         points: [
-          "Share your Somnia name (yourname.w-chain) with the sender",
+          "Share your Somnia name (yourname.somnia) with the sender",
           "Or share your wallet address from the Receive section",
           "Incoming transactions will appear in your activity feed",
           "Tokens will be automatically added to your balance",

@@ -60,7 +60,7 @@ export interface GasEstimate {
   gasWithBuffer: bigint;
   gasPrice: bigint;
   gasCost: bigint;
-  gasCostInWCO: string;
+  gasCostInSTT: string;
 }
 
 // Estimate gas for wallet creation without deploying
@@ -136,16 +136,16 @@ export const estimateWalletCreationGas = async (name: string, privateKey: string
     }
     
     const gasCost = gasPrice * gasWithBuffer;
-    const gasCostInWCO = (Number(gasCost) / 1e18).toFixed(6);
+    const gasCostInSTT = (Number(gasCost) / 1e18).toFixed(6);
     
-    console.log(`Gas cost calculation: ${gasPrice} * ${gasWithBuffer} = ${gasCost} wei (${gasCostInWCO} WCO)`);
+    console.log(`Gas cost calculation: ${gasPrice} * ${gasWithBuffer} = ${gasCost} wei (${gasCostInSTT} STT)`);
     
     return {
       estimatedGas,
       gasWithBuffer,
       gasPrice,
       gasCost,
-      gasCostInWCO
+      gasCostInSTT
     };
   } catch (error) {
     console.error('Gas estimation failed:', error);
@@ -201,11 +201,11 @@ export const deploySmartContractWallet = async (name: string, privateKey: string
     console.log(`Account balance: ${balance} wei, Required gas cost: ${gasCost} wei`);
     
     if (balance < gasCost) {
-      const balanceInWCO = Number(balance) / 1e18;
-      const requiredInWCO = Number(gasCost) / 1e18;
+      const balanceInSTT = Number(balance) / 1e18;
+      const requiredInSTT = Number(gasCost) / 1e18;
       throw new Error(
-        `Insufficient funds for gas. Required: ${requiredInWCO.toFixed(6)} WCO (${gasCost} wei), Available: ${balanceInWCO.toFixed(6)} WCO (${balance} wei). ` +
-        `Please fund the address ${account.address} with some WCO tokens first.`
+        `Insufficient funds for gas. Required: ${requiredInSTT.toFixed(6)} STT (${gasCost} wei), Available: ${balanceInSTT.toFixed(6)} STT (${balance} wei). ` +
+        `Please fund the address ${account.address} with some STT tokens first.`
       );
     }
 

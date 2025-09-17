@@ -49,7 +49,7 @@ const SecuritySetup = () => {
         type: 'email',
         value: recoveryEmail,
         is_verified: false
-      } as any);
+      } );
 
       if (!method) {
         toast({ title: "Error", description: "Failed to create recovery record.", variant: "destructive" });
@@ -122,8 +122,8 @@ const SecuritySetup = () => {
           wallet_id: walletId,
           theme: 'system',
           notifications_enabled: true,
-          security_level: isEmailVerified ? 'basic' : 'minimal'
-        } as any);
+          security_level: isEmailVerified ? 'basic' : 'advanced'
+        });
       }
     } catch (e) {
       console.error('Failed saving settings', e);
@@ -169,7 +169,7 @@ const SecuritySetup = () => {
             Secure Your Wallet
           </h1>
           <p className="text-muted-foreground">
-            Set up additional security features to protect your W-Access wallet
+            Set up additional security features to protect your Somnia wallet
           </p>
         </div>
 

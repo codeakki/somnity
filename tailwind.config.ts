@@ -62,7 +62,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// W-Access Custom Colors
+				// Somnia Custom Colors
 				gold: {
 					DEFAULT: 'hsl(var(--gold))',
 					bright: 'hsl(var(--gold-bright))',

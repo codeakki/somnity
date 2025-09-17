@@ -60,7 +60,7 @@ export interface GasEstimate {
   gasWithBuffer: bigint;
   gasPrice: bigint;
   gasCost: bigint;
-  gasCostInWCO: string;
+  gasCostInSTT: string;
 }
 
 // Estimate gas for wallet creation without deploying
@@ -124,7 +124,7 @@ export const estimateWalletCreationGas = async (name: string, privateKey: string
     } catch (error) {
       console.warn('Failed to get gas price from RPC, using fallback:', error);
       // Fallback to a reasonable gas price if RPC calls fail
-      // For W-Chain testnet, use a conservative estimate
+      // For Somnia testnet, use a conservative estimate
       gasPrice = 1000000000n; // 1 gwei as fallback
       console.log(`Using fallback gas price: ${gasPrice} wei (1 gwei)`);
     }
@@ -136,16 +136,16 @@ export const estimateWalletCreationGas = async (name: string, privateKey: string
     }
     
     const gasCost = gasPrice * gasWithBuffer;
-    const gasCostInWCO = (Number(gasCost) / 1e18).toFixed(6);
+    const gasCostInSTT = (Number(gasCost) / 1e18).toFixed(6);
     
-    console.log(`Gas cost calculation: ${gasPrice} * ${gasWithBuffer} = ${gasCost} wei (${gasCostInWCO} WCO)`);
+    console.log(`Gas cost calculation: ${gasPrice} * ${gasWithBuffer} = ${gasCost} wei (${gasCostInSTT} STT)`);
     
     return {
       estimatedGas,
       gasWithBuffer,
       gasPrice,
       gasCost,
-      gasCostInWCO
+      gasCostInSTT
     };
   } catch (error) {
     console.error('Gas estimation failed:', error);
@@ -201,11 +201,11 @@ export const deploySmartContractWallet = async (name: string, privateKey: string
     console.log(`Account balance: ${balance} wei, Required gas cost: ${gasCost} wei`);
     
     if (balance < gasCost) {
-      const balanceInWCO = Number(balance) / 1e18;
-      const requiredInWCO = Number(gasCost) / 1e18;
+      const balanceInSTT = Number(balance) / 1e18;
+      const requiredInSTT = Number(gasCost) / 1e18;
       throw new Error(
-        `Insufficient funds for gas. Required: ${requiredInWCO.toFixed(6)} WCO (${gasCost} wei), Available: ${balanceInWCO.toFixed(6)} WCO (${balance} wei). ` +
-        `Please fund the address ${account.address} with some WCO tokens first.`
+        `Insufficient funds for gas. Required: ${requiredInSTT.toFixed(6)} STT (${gasCost} wei), Available: ${balanceInSTT.toFixed(6)} STT (${balance} wei). ` +
+        `Please fund the address ${account.address} with some STT tokens first.`
       );
     }
 
@@ -257,7 +257,7 @@ export const deploySmartContractWallet = async (name: string, privateKey: string
       chainId: activeChain.id,
     };
 
-    // Use legacy transaction for better compatibility with W-Chain
+    // Use legacy transaction for better compatibility with Somnia
     // The RPC seems to have issues with EIP-1559, so let's use legacy format
     transaction.type = '0x0'; // Legacy transaction type
     transaction.gasPrice = gasPrice;

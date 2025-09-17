@@ -17,14 +17,14 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center">
             <img 
-              src="/lovable-uploads/f03e8d40-ba1a-4f1e-a6c0-d0a28269e251.png" 
-              alt="W-Access" 
-              className="w-6 h-6 sm:w-8 sm:h-8"
+              src="/lovable-uploads/w-access-logo2.webp" 
+              alt="Somnia"
+              className="h-16 w-16 mt-2.5" 
             />
-            <span className="text-lg sm:text-xl font-bold bg-gradient-hero bg-clip-text text-transparent whitespace-nowrap">
-              W-ACCESS
+            <span className="text-lg font-bold bg-gradient-hero bg-clip-text text-transparent">
+              SOMNITY
             </span>
           </div>
 

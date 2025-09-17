@@ -84,7 +84,7 @@ export class FundingService {
       const balanceInWei = parseEther(balance);
       const requiredAmount = parseEther(fundingAmount);
       
-      // Reserve some amount for gas fees (0.001 WCO)
+      // Reserve some amount for gas fees (0.001 STT)
       const gasReserve = parseEther("0.001");
       const totalRequired = requiredAmount + gasReserve;
       
@@ -147,7 +147,7 @@ export class FundingService {
   }
 
   /**
-   * Fund a wallet with WCO tokens
+   * Fund a wallet with STT tokens
    */
   static async fundWallet(walletAddress: string, amount: string = "0.32"): Promise<FundingResult> {
     try {
@@ -210,25 +210,25 @@ export class FundingService {
   /**
    * Fund a wallet with exact gas cost amount
    */
-  static async fundWalletForGas(walletAddress: string, gasCostInWCO: string): Promise<FundingResult> {
+  static async fundWalletForGas(walletAddress: string, gasCostInSTT: string): Promise<FundingResult> {
     try {
       // Add a small buffer (10%) to the gas cost for safety
-      const fundingAmount = (parseFloat(gasCostInWCO) * 1.1).toFixed(6);
+      const fundingAmount = (parseFloat(gasCostInSTT) * 1.1).toFixed(6);
       
-      console.log(`Checking if wallet ${walletAddress} needs funding for gas cost ${gasCostInWCO} WCO`);
+      console.log(`Checking if wallet ${walletAddress} needs funding for gas cost ${gasCostInSTT} STT`);
       
       // Check if wallet is already funded with sufficient amount
       const isAlreadyFunded = await this.isWalletFunded(walletAddress, fundingAmount);
       
       if (isAlreadyFunded) {
-        console.log(`Wallet ${walletAddress} is already funded with sufficient amount (${fundingAmount} WCO)`);
+        console.log(`Wallet ${walletAddress} is already funded with sufficient amount (${fundingAmount} STT)`);
         return {
           success: true,
           transactionHash: "already_funded" // Special identifier for already funded wallets
         };
       }
       
-      console.log(`Funding wallet ${walletAddress} with ${fundingAmount} WCO for gas cost ${gasCostInWCO} WCO`);
+      console.log(`Funding wallet ${walletAddress} with ${fundingAmount} STT for gas cost ${gasCostInSTT} STT`);
       
       return await this.fundWallet(walletAddress, fundingAmount);
     } catch (error) {
@@ -251,13 +251,13 @@ export class FundingService {
    * Get minimum funding amount
    */
   static getMinimumFundingAmount(): string {
-    return "0.32"; // 0.32 WCO
+    return "0.32"; // 0.32 STT
   }
 
   /**
    * Get recommended funding amount
    */
   static getRecommendedFundingAmount(): string {
-    return "0.32"; // 0.32 WCO
+    return "0.32"; // 0.32 STT
   }
 }

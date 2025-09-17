@@ -6,25 +6,25 @@ export interface SendOtpPayload {
 
 export async function sendOtpEmail(payload: SendOtpPayload): Promise<void> {
   const apiKey = import.meta.env.VITE_BREVO_API_KEY;
-  const senderEmail =
-    import.meta.env.VITE_BREVO_SENDER_EMAIL || "no-reply@w-access.com";
-  const senderName = import.meta.env.VITE_BREVO_SENDER_NAME || "W-Access";
-  const logoUrl =
-    import.meta.env.VITE_LOGO_URL ||
-    "https://your-domain.com/w-access-logo.svg";
+  const senderEmail = 
+    import.meta.env.VITE_BREVO_SENDER_EMAIL || "no-reply@somnity.com";
+  const senderName = import.meta.env.VITE_BREVO_SENDER_NAME || "Somnia";
+  const logoUrl = 
+    import.meta.env.VITE_LOGO_URL || 
+    "https://your-domain.com/somnity-logo.svg";
 
   if (!apiKey) {
     throw new Error("VITE_BREVO_API_KEY environment variable is required");
   }
 
-  const subject = payload.subject || "Your W-Access verification code";
+  const subject = payload.subject || "Your Somnia verification code";
   const html = `
     <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W-Access Verification Code</title>
+  <title>Somnia Verification Code</title>
   <style>
     @media only screen and (max-width: 600px) {
       .otp-code {
@@ -49,8 +49,8 @@ export async function sendOtpEmail(payload: SendOtpPayload): Promise<void> {
     
     <!-- Header with Logo -->
     <div style="background-color:#000000;padding:48px 24px;text-align:center;position:relative;">
-      <img src="${logoUrl}" alt="W-Access" style="height:96px;width:auto;margin-bottom:16px;filter:brightness(1.2);" />
-      <h1 style="color:#ffffff;margin:0;font-size:32px;font-weight:700;letter-spacing:-0.025em;">W-Access</h1>
+      <img src="${logoUrl}" alt="Somnia" style="height:96px;width:auto;margin-bottom:16px;filter:brightness(1.2);" />
+      <h1 style="color:#ffffff;margin:0;font-size:32px;font-weight:700;letter-spacing:-0.025em;">Somnia</h1>
       <p style="color:#a1a1aa;margin:8px 0 0 0;font-size:16px;font-weight:500;">Secure Wallet Recovery</p>
     </div>
     
@@ -84,7 +84,7 @@ export async function sendOtpEmail(payload: SendOtpPayload): Promise<void> {
       
       <!-- Footer Text -->
       <p style="color:#71717a;margin:0;font-size:14px;line-height:1.5;text-align:center;">
-        This email was sent by W-Access. For security reasons, please do not share this code with anyone.
+        This email was sent by Somnia. For security reasons, please do not share this code with anyone.
       </p>
     </div>
     
@@ -93,7 +93,7 @@ export async function sendOtpEmail(payload: SendOtpPayload): Promise<void> {
       <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 50% 0%, rgba(99,102,241,0.05) 0%, transparent 50%);"></div>
       <div style="position:relative;z-index:1;">
         <p style="color:#71717a;margin:0 0 8px 0;font-size:12px;font-weight:500;">
-          © 2025 W-Access. All rights reserved.
+          © 2025 Somnia. All rights reserved.
         </p>
         <p style="color:#52525b;margin:0;font-size:12px;">
           Secure • Private • Decentralized

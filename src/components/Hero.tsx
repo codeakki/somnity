@@ -53,11 +53,11 @@ const Hero = () => {
         >
           {/* Logo */}
           <div className="mb-6 sm:mb-8 mt-2 sm:mt-5">
-            <img 
+            {/* <img 
               src="/lovable-uploads/transparent_logo.png" 
-              alt="W-Access Logo" 
+              alt="Somnia Logo" 
               className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto animate-float mix-blend-fallback"
-            />
+            /> */}
           </div>
 
           {/* Main Headline */}
@@ -66,7 +66,7 @@ const Hero = () => {
             variants={childVariants}
           >
             <span className="block gradient-text pb-2 sm:pb-5">
-              Simplifying Web3 for Everyone on W-Chain
+              Simplifying Web3 for Everyone on Somnia
             </span>
           </motion.h1>
 

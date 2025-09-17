@@ -1,13 +1,13 @@
-export const DEFAULT_CHAIN_ID = 71117 as const;
+export const DEFAULT_CHAIN_ID = 50312 as const;
 
 export const ADDRESSES = {
-  71117: {
-    WNSRegistry: "0x269ca8D0fB38Fe18435B2AC70911487ED340B2F3",
-    WalletImplementation: "0x440Df1c316041B15F08298Da6c267B38Dcd3aE7c",
-    WalletFactory: "0x52d50D41FABB1A2C3434cA79d9a3963D9140C7De",
-    RecoveryManager: "0x7C2930C0AA1E7A17694EdF82e6d1Ae4E6ef3f607",
+  50312: {
+    WNSRegistry: "0xbcBC65828Afea72b83C8a07666226d3319739b62",
+    WalletImplementation: "0x269ca8D0fB38Fe18435B2AC70911487ED340B2F3",
+    WalletFactory: "0x440Df1c316041B15F08298Da6c267B38Dcd3aE7c",
+    RecoveryManager: "0x52d50D41FABB1A2C3434cA79d9a3963D9140C7De",
   },
-  171717: {
+  503121: {
     // TODO: fill with mainnet addresses when deployed
     WNSRegistry: "0x0000000000000000000000000000000000000000",
     WalletImplementation: "0x0000000000000000000000000000000000000000",

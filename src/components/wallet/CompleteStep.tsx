@@ -49,11 +49,11 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
     setIsCheckingStatus(true);
     try {
       // Use gas estimate amount if available, otherwise use default
-      const fundingAmount = gasEstimate ? (parseFloat(gasEstimate.gasCostInWCO) * 1.1).toFixed(6) : "0.32";
+      const fundingAmount = gasEstimate ? (parseFloat(gasEstimate.gasCostInSTT) * 1.1).toFixed(6) : "0.32";
       
       console.log('CompleteStep - checkFundingStatus:', {
         gasEstimate,
-        gasCostInWCO: gasEstimate?.gasCostInWCO,
+        gasCostInSTT: gasEstimate?.gasCostInSTT,
         fundingAmount,
         walletAddress
       });
@@ -80,17 +80,17 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
       let result;
       if (gasEstimate) {
         // Use gas-based funding if gas estimate is available
-        result = await FundingService.fundWalletForGas(walletAddress, gasEstimate.gasCostInWCO);
+        result = await FundingService.fundWalletForGas(walletAddress, gasEstimate.gasCostInSTT);
       } else {
         // Fallback to default funding
         result = await FundingService.fundWallet(walletAddress);
       }
       
       if (result.success) {
-        const fundingAmount = gasEstimate ? (parseFloat(gasEstimate.gasCostInWCO) * 1.1).toFixed(6) : FundingService.getMinimumFundingAmount();
+        const fundingAmount = gasEstimate ? (parseFloat(gasEstimate.gasCostInSTT) * 1.1).toFixed(6) : FundingService.getMinimumFundingAmount();
         toast({
           title: "Wallet Funded Successfully!",
-          description: `Your wallet has been funded with ${fundingAmount} WCO tokens.`,
+          description: `Your wallet has been funded with ${fundingAmount} STT tokens.`,
         });
         // Refresh funding status
         await checkFundingStatus();
@@ -143,14 +143,14 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
           <CheckCircle className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-2xl font-bold">Wallet Created Successfully!</h2>
-        <p className="text-muted-foreground">Your W-Access wallet is ready to use</p>
+        <p className="text-muted-foreground">Your Somnia wallet is ready to use</p>
       </div>
 
       <Card className="border-primary/20 bg-gradient-subtle">
         <CardContent className="pt-6">
           <div className="space-y-4">
             <div className="text-center">
-              <div className="text-lg font-semibold text-primary whitespace-nowrap">{walletName}.w-chain</div>
+              <div className="text-lg font-semibold text-primary whitespace-nowrap">{walletName}.somnia</div>
               <div className="flex items-center justify-center gap-2 mt-2">
                 <div className="text-sm text-muted-foreground font-mono">{displayAddress}</div>
                 {walletAddress && (
@@ -175,7 +175,7 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
               {gasEstimate && (
                 <Badge variant="secondary">
                   <Zap className="w-3 h-3 mr-1" />
-                  Gas: {gasEstimate.gasCostInWCO} WCO
+                  Gas: {gasEstimate.gasCostInSTT} STT
                 </Badge>
               )}
             </div>
@@ -219,7 +219,7 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Total Cost:</span>
-                        <span className="font-mono font-semibold text-primary">{gasEstimate.gasCostInWCO} WCO</span>
+                        <span className="font-mono font-semibold text-primary">{gasEstimate.gasCostInSTT} STT</span>
                       </div>
                     </div>
                   </div>
@@ -273,11 +273,11 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
                           <div className="text-sm space-y-1">
                             <div className="flex justify-between">
                               <span>Server Balance:</span>
-                              <span className="font-mono">{fundingStatus.balance} WCO</span>
+                              <span className="font-mono">{fundingStatus.balance} STT</span>
                             </div>
                             <div className="flex justify-between">
                               <span>Funding Amount:</span>
-                              <span className="font-mono">{fundingStatus.fundingAmount} WCO</span>
+                              <span className="font-mono">{fundingStatus.fundingAmount} STT</span>
                             </div>
                           </div>
                         </div>
@@ -288,7 +288,7 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
                           <div className="bg-muted/50 p-3 rounded-lg text-sm space-y-2">
                             <p>
                               Server balance is low. Please fund your wallet directly to proceed. Send at least
-                              <span className="font-semibold"> {fundingStatus.fundingAmount} WCO </span>
+                              <span className="font-semibold"> {fundingStatus.fundingAmount} STT </span>
                               to the address below:
                             </p>
                             <div className="flex items-center justify-between bg-background/60 rounded-md px-3 py-2 font-mono text-xs">
@@ -313,7 +313,7 @@ export const CompleteStep = ({ walletName, walletAddress, gasEstimate, isEstimat
                           ) : (
                             <>
                               <Wallet className="w-4 h-4 mr-2" />
-                              Fund Wallet ({fundingStatus.fundingAmount} WCO)
+                              Fund Wallet ({fundingStatus.fundingAmount} STT)
                             </>
                           )}
                         </Button>

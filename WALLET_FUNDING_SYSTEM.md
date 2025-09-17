@@ -1,14 +1,14 @@
 # Wallet Funding System
 
-This document describes the wallet funding system implemented in the W-Chain Gate application.
+This document describes the wallet funding system implemented in the Somnia Gate application.
 
 ## Overview
 
-The wallet funding system automatically funds newly created wallets with WCO tokens to make them immediately functional. This system uses a server-side private key to send initial funding to user wallets.
+The wallet funding system automatically funds newly created wallets with STT tokens to make them immediately functional. This system uses a server-side private key to send initial funding to user wallets.
 
 ## Features
 
-- **Automatic Funding**: Newly created wallets are automatically funded with a small amount of WCO tokens
+- **Automatic Funding**: Newly created wallets are automatically funded with a small amount of STT tokens
 - **Balance Checking**: Server account balance is monitored to ensure sufficient funds are available
 - **Error Handling**: Clear error messages when funding fails due to insufficient server balance
 - **User Feedback**: Real-time status updates and progress indicators during funding process
@@ -38,8 +38,8 @@ The wallet funding system automatically funds newly created wallets with WCO tok
 - `getFundingStatus(walletAddress, amount)`: Gets comprehensive funding status
 - `fundWallet(walletAddress, amount)`: Executes funding transaction
 - `getServerAddress()`: Returns server account address
-- `getMinimumFundingAmount()`: Returns minimum funding amount (0.01 WCO)
-- `getRecommendedFundingAmount()`: Returns recommended funding amount (0.1 WCO)
+- `getMinimumFundingAmount()`: Returns minimum funding amount (0.01 STT)
+- `getRecommendedFundingAmount()`: Returns recommended funding amount (0.1 STT)
 
 ## Configuration
 
@@ -49,7 +49,7 @@ Create a `.env` file with the following variables:
 
 ```env
 # Server Private Key for Wallet Funding
-# This should be a secure private key with sufficient WCO balance
+# This should be a secure private key with sufficient STT balance
 VITE_SERVER_PRIVATE_KEY=0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
 
 # W Chain Configuration
@@ -71,13 +71,13 @@ VITE_W_CHAIN_RPC_URL=https://rpc-testnet.w-chain.com
 1. Create a new wallet through the normal flow
 2. On the "Complete" step, the system will automatically check funding status
 3. If the wallet needs funding, click the "Fund Wallet" button
-4. The system will send WCO tokens from the server account to the new wallet
+4. The system will send STT tokens from the server account to the new wallet
 5. Once funded, the wallet will show as "Funded" and ready to use
 
 ### For Developers
 
 1. Set up the server private key in environment variables
-2. Ensure the server account has sufficient WCO balance
+2. Ensure the server account has sufficient STT balance
 3. The funding system will automatically activate for new wallet creation
 4. Monitor server balance and refill as needed
 
@@ -117,7 +117,7 @@ The system handles various error scenarios:
 ### Common Issues
 
 1. **"Server account has insufficient balance"**
-   - Solution: Add more WCO tokens to the server account
+   - Solution: Add more STT tokens to the server account
 
 2. **"Failed to fund wallet"**
    - Check network connectivity

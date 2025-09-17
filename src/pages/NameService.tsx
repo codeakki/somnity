@@ -13,15 +13,15 @@ const NameService = () => {
   const [selectedName, setSelectedName] = useState("");
 
   const myNames = [
-    { name: "alice.w-chain", address: "0x1234...5678", status: "active", expires: "365 days", primary: true },
-    { name: "alice-work.w-chain", address: "0x8765...4321", status: "active", expires: "290 days", primary: false },
-    { name: "alice-crypto.w-chain", address: "0x9876...1234", status: "pending", expires: "---", primary: false },
+    { name: "alice.somnia", address: "0x1234...5678", status: "active", expires: "365 days", primary: true },
+    { name: "alice-work.somnia", address: "0x8765...4321", status: "active", expires: "290 days", primary: false },
+    { name: "alice-crypto.somnia", address: "0x9876...1234", status: "pending", expires: "---", primary: false },
   ];
 
   const searchResults = [
-    { name: "alice-dev.w-chain", status: "available", price: "10 W-CHAIN" },
-    { name: "alice-nft.w-chain", status: "available", price: "15 W-CHAIN" },
-    { name: "alice-defi.w-chain", status: "taken", owner: "0x1111...2222" },
+    { name: "alice-dev.somnia", status: "available", price: "10 SOMNIA" },
+    { name: "alice-nft.somnia", status: "available", price: "15 SOMNIA" },
+    { name: "alice-defi.somnia", status: "taken", owner: "0x1111...2222" },
   ];
 
   const getStatusIcon = (status: string) => {
@@ -52,7 +52,7 @@ const NameService = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
             Name Service
           </h1>
-          <p className="text-muted-foreground">Register and manage human-readable addresses on W-Chain</p>
+          <p className="text-muted-foreground">Register and manage human-readable addresses on Somnia</p>
         </div>
 
         {/* Search Section */}
@@ -62,7 +62,7 @@ const NameService = () => {
               <Search className="w-5 h-5 mr-2" />
               Search Names
             </CardTitle>
-            <CardDescription>Find and register available W-Chain names</CardDescription>
+            <CardDescription>Find and register available Somnia names</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex gap-4">
@@ -77,7 +77,7 @@ const NameService = () => {
                     className="rounded-r-none"
                   />
                   <div className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground">
-                    .w-chain
+                    .somnia
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Your Registered Names</CardTitle>
-                <CardDescription>Manage your W-Chain names and settings</CardDescription>
+                <CardDescription>Manage your Somnia names and settings</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -183,7 +183,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Register New Name</CardTitle>
-                <CardDescription>Claim your unique W-Chain identity</CardDescription>
+                <CardDescription>Claim your unique Somnia identity</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
@@ -197,7 +197,7 @@ const NameService = () => {
                       className="rounded-r-none"
                     />
                     <div className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground">
-                      .w-chain
+                      .somnia
                     </div>
                   </div>
                 </div>
@@ -205,22 +205,22 @@ const NameService = () => {
                 <Alert>
                   <CheckCircle className="h-4 w-4" />
                   <AlertDescription>
-                    Registration fee: 10 W-CHAIN (1 year) • Premium names may cost more
+                    Registration fee: 10 somnia (1 year) • Premium names may cost more
                   </AlertDescription>
                 </Alert>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <span>Registration (1 year)</span>
-                    <span className="font-semibold">10 W-CHAIN</span>
+                    <span className="font-semibold">10 somnia</span>
                   </div>
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <span>Gas Fee (estimated)</span>
-                    <span className="font-semibold">0.5 W-CHAIN</span>
+                    <span className="font-semibold">0.5 somnia</span>
                   </div>
                   <div className="flex items-center justify-between p-4 border rounded-lg bg-primary/5">
                     <span className="font-semibold">Total</span>
-                    <span className="font-bold text-primary">10.5 W-CHAIN</span>
+                    <span className="font-bold text-primary">10.5 somnia</span>
                   </div>
                 </div>
 
@@ -235,7 +235,7 @@ const NameService = () => {
             <Card className="border-primary/20">
               <CardHeader>
                 <CardTitle>Name Marketplace</CardTitle>
-                <CardDescription>Buy and sell premium W-Chain names</CardDescription>
+                <CardDescription>Buy and sell premium Somnia names</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-center py-12">
@@ -244,7 +244,7 @@ const NameService = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Marketplace Coming Soon</h3>
                   <p className="text-muted-foreground">
-                    The secondary marketplace for trading W-Chain names will be available soon.
+                    The secondary marketplace for trading Somnia names will be available soon.
                   </p>
                 </div>
               </CardContent>

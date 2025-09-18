@@ -15,3 +15,31 @@ export const ADDRESSES = {
     RecoveryManager: "0x0000000000000000000000000000000000000000",
   },
 } as const;
+
+
+import WalletFactoryABI from "./abi/WalletFactory.json";
+import WalletImplementationABI from "./abi/WalletImplementation.json";
+import WNSRegistryABI from "./abi/WNSRegistry.json";
+import RecoveryManagerABI from "./abi/RecoveryManager.json";
+
+// Get current chain addresses (default to testnet)
+const currentAddresses = ADDRESSES[50312];
+
+export const contracts = {
+  walletFactory: {
+    address: currentAddresses.WalletFactory,
+    abi: WalletFactoryABI,
+  },
+  walletImplementation: {
+    address: currentAddresses.WalletImplementation,
+    abi: WalletImplementationABI,
+  },
+  wnsRegistry: {
+    address: currentAddresses.WNSRegistry,
+    abi: WNSRegistryABI,
+  },
+  recoveryManager: {
+    address: currentAddresses.RecoveryManager,
+    abi: RecoveryManagerABI,
+  },
+};

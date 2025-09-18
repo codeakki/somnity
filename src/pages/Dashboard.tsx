@@ -2,18 +2,23 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Plus, Wallet, Copy, ExternalLink, LogOut, Info } from "lucide-react";
+import { Plus, Wallet, Copy, ExternalLink, LogOut, Info, Send, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { walletService } from "@/lib/database";
 import { Wallet as WalletType } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
 import { walletSession } from "@/lib/session";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { SendTransaction } from "@/components/SendTransaction";
+import { TransactionService } from "@/lib/transaction";
+import { WalletBalance } from "@/components/WalletBalance";
 
 const Dashboard = () => {
   const [wallets, setWallets] = useState<WalletType[]>([]);
   const [loading, setLoading] = useState(true);
   const [sessionInfo, setSessionInfo] = useState<any>(null);
+  const [sendTransactionOpen, setSendTransactionOpen] = useState(false);
+  const [selectedWallet, setSelectedWallet] = useState<WalletType | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -79,6 +84,25 @@ const Dashboard = () => {
     });
   };
 
+  const handleSendTransaction = (wallet: WalletType) => {
+    setSelectedWallet(wallet);
+    setSendTransactionOpen(true);
+  };
+
+  const handleCloseSendTransaction = () => {
+    setSendTransactionOpen(false);
+    setSelectedWallet(null);
+  };
+
+  const handleTransactionSent = (txHash: string) => {
+    toast({
+      title: "Transaction Sent!",
+      description: `Transaction hash: ${txHash.slice(0, 10)}...`,
+    });
+    // Reload wallets to update balances
+    loadWallets();
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
@@ -116,10 +140,10 @@ const Dashboard = () => {
               
               <AlertDialog>
                 <AlertDialogTrigger asChild>
-                  {/* <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm">
                     <LogOut className="w-4 h-4 mr-2" />
                     Clear Session
-                  </Button> */}
+                  </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
@@ -147,7 +171,7 @@ const Dashboard = () => {
             </div>
           </div>
           <p className="text-muted-foreground">
-            Manage your Somnia wallets and view their details. Wallets are associated with your current browser session.
+            Manage your W-Chain wallets and view their details. Wallets are associated with your current browser session.
           </p>
         </div>
 
@@ -173,7 +197,7 @@ const Dashboard = () => {
               <Wallet className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
               <h3 className="text-xl font-semibold mb-2">No Wallets Yet</h3>
               <p className="text-muted-foreground mb-6">
-                Create your first wallet to get started with Somnia.
+                Create your first wallet to get started with W-Chain.
               </p>
               <Button
                 onClick={() => navigate("/create-wallet")}
@@ -192,7 +216,7 @@ const Dashboard = () => {
                   <div className="flex items-center justify-between">
                     <CardTitle className="flex items-center">
                       <Wallet className="w-5 h-5 mr-2" />
-                      {wallet.name}.somnia
+                      {wallet.name}.w-chain
                     </CardTitle>
                     <Badge variant="outline">Active</Badge>
                   </div>
@@ -201,6 +225,16 @@ const Dashboard = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  {/* Balance Display */}
+                  <div>
+                    <label className="text-sm font-medium text-muted-foreground">
+                      Balance
+                    </label>
+                    <div className="mt-1">
+                      <WalletBalance walletAddress={wallet.address} showRefresh={true} />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="text-sm font-medium text-muted-foreground">
                       Address
@@ -219,9 +253,29 @@ const Dashboard = () => {
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className="bg-gradient-primary hover:opacity-90"
+                      onClick={() => handleSendTransaction(wallet)}
+                    >
+                      <Send className="w-4 h-4 mr-2" />
+                      Send
+                    </Button>
                     <Button
                       variant="outline"
+                      size="sm"
+                      onClick={() => copyToClipboard(wallet.address, "Address")}
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Receive
+                    </Button>
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <Button
+                      variant="ghost"
                       size="sm"
                       className="flex-1"
                       onClick={() => copyToClipboard(wallet.address, "Address")}
@@ -230,13 +284,13 @@ const Dashboard = () => {
                       Copy Address
                     </Button>
                     <Button
-                      variant="outline"
+                      variant="ghost"
                       size="sm"
                       className="flex-1"
                       onClick={() => window.open(`https://shannon-explorer.somnia.network/address/${wallet.address}`, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      View
+                      View on Explorer
                     </Button>
                   </div>
                 </CardContent>
@@ -274,6 +328,16 @@ const Dashboard = () => {
               </CardContent>
             </Card>
           </div>
+        )}
+
+        {/* Send Transaction Modal */}
+        {selectedWallet && (
+          <SendTransaction
+            wallet={selectedWallet}
+            isOpen={sendTransactionOpen}
+            onClose={handleCloseSendTransaction}
+            onTransactionSent={handleTransactionSent}
+          />
         )}
       </div>
     </div>

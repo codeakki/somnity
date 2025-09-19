@@ -11,7 +11,7 @@ export async function sendOtpEmail(payload: SendOtpPayload): Promise<void> {
   const senderName = import.meta.env.VITE_BREVO_SENDER_NAME || "Somnia";
   const logoUrl = 
     import.meta.env.VITE_LOGO_URL || 
-    "https://your-domain.com/somnity-logo.svg";
+    "https://somnity.vercel.app/lovable-uploads/somnialogo.webp";
 
   if (!apiKey) {
     throw new Error("VITE_BREVO_API_KEY environment variable is required");

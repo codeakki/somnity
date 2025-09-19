@@ -216,7 +216,7 @@ const Dashboard = () => {
                   <div className="flex items-center justify-between">
                     <CardTitle className="flex items-center">
                       <Wallet className="w-5 h-5 mr-2" />
-                      {wallet.name}.Somnia
+                      {wallet.name}.somnia
                     </CardTitle>
                     <Badge variant="outline">Active</Badge>
                   </div>

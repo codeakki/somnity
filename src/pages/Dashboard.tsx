@@ -171,7 +171,7 @@ const Dashboard = () => {
             </div>
           </div>
           <p className="text-muted-foreground">
-            Manage your W-Chain wallets and view their details. Wallets are associated with your current browser session.
+            Manage your Somnia wallets and view their details. Wallets are associated with your current browser session.
           </p>
         </div>
 
@@ -197,7 +197,7 @@ const Dashboard = () => {
               <Wallet className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
               <h3 className="text-xl font-semibold mb-2">No Wallets Yet</h3>
               <p className="text-muted-foreground mb-6">
-                Create your first wallet to get started with W-Chain.
+                Create your first wallet to get started with Somnia.
               </p>
               <Button
                 onClick={() => navigate("/create-wallet")}
@@ -216,7 +216,7 @@ const Dashboard = () => {
                   <div className="flex items-center justify-between">
                     <CardTitle className="flex items-center">
                       <Wallet className="w-5 h-5 mr-2" />
-                      {wallet.name}.w-chain
+                      {wallet.name}.Somnia
                     </CardTitle>
                     <Badge variant="outline">Active</Badge>
                   </div>

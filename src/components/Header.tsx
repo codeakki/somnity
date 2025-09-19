@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/w-access-logo2.webp" 
+              src="/lovable-uploads/somnialogo.webp" 
               alt="Somnia"
               className="h-16 w-16 mt-2.5" 
             />
